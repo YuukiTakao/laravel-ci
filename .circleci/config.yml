@@ -19,11 +19,11 @@ jobs:
       - checkout:
         path: ~/repo
 
-    - run: sudo apt update
-    - run: sudo apt upgrade
-    - run: sudo apt install -y git libgmp3-dev libmcrypt-dev libxml2-dev libmcrypt-dev default-mysql-client
-    - run: sudo ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h
-    - run: sudo docker-php-ext-install gmp xml mbstring pdo tokenizer dom pdo_mysq
+      - run: sudo apt update
+      - run: sudo apt upgrade
+      - run: sudo apt install -y git libgmp3-dev libmcrypt-dev libxml2-dev libmcrypt-dev default-mysql-client
+      - run: sudo ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h
+      - run: sudo docker-php-ext-install gmp xml mbstring pdo tokenizer dom pdo_mysq
 
       # Download and cache dependencies
       - restore_cache:
