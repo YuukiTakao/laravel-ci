@@ -44,6 +44,4 @@ jobs:
       - run: php artisan clear-compiled
 
       # run tests with phpunit or codecept
-      - run: mv ./tests/.env.circleci ./tests/.env
-      - run: php artisan key:generate
       - run: ./vendor/bin/phpunit
