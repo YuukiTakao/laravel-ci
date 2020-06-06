@@ -11,7 +11,7 @@ jobs:
 
     environment:
       - APP_DEBUG: true
-      - APP_ENV: testin
+      - APP_ENV: testing
 
     working_directory: ~/repo/
 
